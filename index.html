@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>dApp Dashboard (HTML & CSS only)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Skip to content -->
+    <a class="skip-link" href="#wallet">Hoppa till innehåll</a>
+
+    <!-- Site header -->
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Till toppen">
+          <!-- Inline SVG logo -->
+          <svg
+            class="logo"
+            viewBox="0 0 48 48"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <defs>
+              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" />
+                <stop offset="1" />
+              </linearGradient>
+            </defs>
+            <circle cx="24" cy="24" r="22" class="logo-ring"></circle>
+            <path
+              class="logo-mark"
+              d="M24 10l10 6v12l-10 6-10-6V16l10-6zm0 4.8L16 19v10l8 4.8 8-4.8V19l-8-4.8z"
+            />
+          </svg>
+          <span class="brand-text">DeVault</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Huvudmeny">
+          <ul>
+            <li><a href="#wallet">Wallet</a></li>
+            <li><a href="#transactions">Transactions</a></li>
+            <li><a href="#create">Create</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="site-main">
+      <!-- HERO / INTRO -->
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <h1 id="hero-title">Din decentraliserade dashboard</h1>
+          <p class="hero-lede">
+            Den här demon visar endast gränssnittet. Ingen interaktivitet – all
+            data nedan är påhittad.
+          </p>
+          <div class="hero-badges" aria-label="Statusetiketter">
+            <span class="badge">Mainnet</span>
+            <span class="badge badge-outline">Read-only</span>
+            <span class="badge badge-soft">v0.1</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- WALLET -->
+      <section
+        id="wallet"
+        class="section container"
+        aria-labelledby="wallet-title"
+      >
+        <div class="section-head">
+          <h2 id="wallet-title">Wallet</h2>
+          <p class="muted">
+            Översikt av saldo, tillgångar och enkel kursindikator.
+          </p>
+        </div>
+
+        <div class="grid cards">
+          <!-- Balance card -->
+          <article class="card" aria-labelledby="balance-title">
+            <h3 id="balance-title" class="card-title">Aktuell balans</h3>
+            <div class="balance">
+              <div class="token">
+                <span class="token-icon" aria-hidden="true">◎</span>
+                <div>
+                  <div class="balance-amount">12.8456 DEV</div>
+                  <div class="balance-fiat muted">≈ 1 284,56 €</div>
+                </div>
+              </div>
+              <div
+                class="trend up"
+                role="img"
+                aria-label="Utveckling senaste 7 dagarna: +4.2%"
+              >
+                <div class="bar" style="--v: 30%"></div>
+                <div class="bar" style="--v: 45%"></div>
+                <div class="bar" style="--v: 40%"></div>
+                <div class="bar" style="--v: 55%"></div>
+                <div class="bar" style="--v: 62%"></div>
+                <div class="bar" style="--v: 58%"></div>
+                <div class="bar" style="--v: 70%"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Assets card -->
+          <article class="card" aria-labelledby="assets-title">
+            <h3 id="assets-title" class="card-title">Tillgångar</h3>
+            <ul class="asset-list">
+              <li>
+                <span class="asset-name"
+                  ><span aria-hidden="true" class="dot"></span> DEV</span
+                >
+                <span class="asset-amt">12.8456</span>
+              </li>
+              <li>
+                <span class="asset-name"
+                  ><span aria-hidden="true" class="dot"></span> USDC</span
+                >
+                <span class="asset-amt">250.00</span>
+              </li>
+              <li>
+                <span class="asset-name"
+                  ><span aria-hidden="true" class="dot"></span> WETH</span
+                >
+                <span class="asset-amt">0.4200</span>
+              </li>
+              <li>
+                <span class="asset-name"
+                  ><span aria-hidden="true" class="dot"></span> NFTs</span
+                >
+                <span class="asset-amt">3</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Network card -->
+          <article class="card" aria-labelledby="network-title">
+            <h3 id="network-title" class="card-title">Nätverk</h3>
+            <dl class="kv">
+              <div>
+                <dt>Kedja</dt>
+                <dd>DeVault Mainnet</dd>
+              </div>
+              <div>
+                <dt>Block</dt>
+                <dd>#12,345,678</dd>
+              </div>
+              <div>
+                <dt>Gas (medel)</dt>
+                <dd>18 gwei</dd>
+              </div>
+              <div>
+                <dt>Node</dt>
+                <dd>eu-1.devault.org</dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <!-- TRANSACTIONS -->
+      <section
+        id="transactions"
+        class="section container"
+        aria-labelledby="tx-title"
+      >
+        <div class="section-head">
+          <h2 id="tx-title">Transactions</h2>
+          <p class="muted">
+            Senaste händelser (fiktiva). För muspekaren över tabellen.
+          </p>
+        </div>
+
+        <div
+          class="card table-card"
+          role="region"
+          aria-label="Transaktionshistorik"
+        >
+          <table class="table">
+            <caption class="sr-only">
+              Transaktionslista (dummy-data)
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Från</th>
+                <th scope="col">Till</th>
+                <th scope="col">Belopp</th>
+                <th scope="col">Status</th>
+                <th scope="col">Tid</th>
+                <th scope="col">Hash</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0xA4…9c2e</td>
+                <td>0x11…d0b3</td>
+                <td>+ 250.00 USDC</td>
+                <td><span class="pill success">Bekräftad</span></td>
+                <td>2025-10-28 14:03</td>
+                <td>0x7f…1a</td>
+              </tr>
+              <tr>
+                <td>0x11…d0b3</td>
+                <td>0xA4…9c2e</td>
+                <td>- 0.0500 WETH</td>
+                <td><span class="pill success">Bekräftad</span></td>
+                <td>2025-10-28 12:18</td>
+                <td>0xa1…2b</td>
+              </tr>
+              <tr>
+                <td>0xA4…9c2e</td>
+                <td>0xFF…77aa</td>
+                <td>- 45.00 DEV</td>
+                <td><span class="pill pending">I kö</span></td>
+                <td>2025-10-28 08:41</td>
+                <td>0x0c…9e</td>
+              </tr>
+              <tr>
+                <td>Faucet</td>
+                <td>0xA4…9c2e</td>
+                <td>+ 10.00 DEV</td>
+                <td><span class="pill success">Bekräftad</span></td>
+                <td>2025-10-27 19:02</td>
+                <td>0x55…aa</td>
+              </tr>
+              <tr>
+                <td>0xE3…ab11</td>
+                <td>0xA4…9c2e</td>
+                <td>+ 0.3700 WETH</td>
+                <td><span class="pill failed">Misslyckad</span></td>
+                <td>2025-10-27 07:55</td>
+                <td>0x2d…c1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- CREATE TRANSACTION (UI ONLY) -->
+      <section
+        id="create"
+        class="section container"
+        aria-labelledby="create-title"
+      >
+        <div class="section-head">
+          <h2 id="create-title">Create transaction</h2>
+          <p class="muted">Formuläret är endast UI. Inga knappar fungerar.</p>
+        </div>
+
+        <form
+          class="card form"
+          aria-describedby="form-help"
+          action="#"
+          method="post"
+        >
+          <p id="form-help" class="muted">
+            Minst tre fälttyper: adress, belopp, tillgångstyp, memo. Fokusstilar
+            för tangentbord.
+          </p>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="to">Till (adress)</label>
+              <input
+                id="to"
+                name="to"
+                type="text"
+                inputmode="latin"
+                placeholder="0x… eller ENS"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="asset">Tillgång</label>
+              <select id="asset" name="asset" required>
+                <option value="" disabled selected>Välj token</option>
+                <option>DEV</option>
+                <option>USDC</option>
+                <option>WETH</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="amount">Belopp</label>
+              <input
+                id="amount"
+                name="amount"
+                type="number"
+                min="0"
+                step="0.0001"
+                placeholder="0.0000"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="when">Tidpunkt</label>
+              <input id="when" name="when" type="datetime-local" />
+            </div>
+
+            <div class="field field-full">
+              <label for="memo">Meddelande (valfritt)</label>
+              <textarea
+                id="memo"
+                name="memo"
+                rows="3"
+                placeholder="Kort notis till mottagaren…"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button
+              type="submit"
+              class="btn primary"
+              aria-disabled="true"
+              title="Avstängd i denna demo"
+            >
+              Skicka
+            </button>
+            <button type="reset" class="btn">Rensa</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <p>
+          © 2025 DeVault — UI-demo. Ingen funktionalitet, endast HTML & CSS.
+        </p>
+        <a class="back-to-top" href="#top">Till toppen ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
