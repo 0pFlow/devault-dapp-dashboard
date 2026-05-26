@@ -1,18 +1,69 @@
 # DeVault — dApp Dashboard (UI Demo)
 
-En **HTML & CSS-endast** demo av ett responsivt gränssnitt för en decentraliserad applikation. Ingen JavaScript, inga riktiga transaktioner — endast visuellt UI med dummy-data.
+A responsive **HTML & CSS-only** demo of a dashboard UI for a decentralized application (dApp). There is no JavaScript and no real blockchain integration — this project focuses purely on layout, styling, accessibility, and visual presentation using dummy data.
 
-<img title="demo-screen" alt="demo image of the UI" src="/screenshots/demo1.png">
+![DeVault dashboard demo](screenshots/demo1.png)
 
-## 🎯 Funktioner (krav uppfyllda)
-- Responsiv layout (mobil → desktop → ultrabreda skärmar)
-- Logotyp + navigation (ankarlänkar: Wallet, Transactions, Create)
-- **Wallet**: saldo, tokenlista, enkel “trend” i ren CSS
-- **Transactions**: tabell med alternerande rader och hover
-- **Create transaction**: formulär UI med minst tre fälttyper (+ tydliga fokusstilar)
-- **Mörkt/ljust läge** via `prefers-color-scheme`
-- Tillgänglighet: semantiska landmärken, skip-link, labels, fokusstilar
+## About
 
-## 🚀 Kör lokalt
+DeVault is a UI mockup for a fictional decentralized wallet. It demonstrates how a clean, accessible dashboard can be built using only semantic HTML and modern CSS. All wallet balances, transactions, and network details shown in the interface are static placeholder values.
+
+## Features
+
+- **Responsive layout** — adapts from mobile and tablet up through desktop and ultra-wide screens
+- **Branded header** — inline SVG logo with anchor navigation (Wallet, Transactions, Create)
+- **Wallet section** — current balance card, asset list, network info, and a pure-CSS 7-day trend indicator
+- **Transactions table** — styled table with alternating rows, hover states, and status pills (confirmed, pending, failed)
+- **Create transaction form** — UI-only form with multiple field types (text, select, number, datetime-local, textarea) and clear focus styles
+- **Dark / light mode** — automatic via `prefers-color-scheme`
+- **Accessibility** — semantic landmarks (`header`, `main`, `footer`, `section`), skip link, ARIA labels, visible focus states, and proper form labels
+- **Custom typography** — Inter and Playfair Display via Google Fonts
+
+## Tech Stack
+
+- **HTML5** — semantic markup with ARIA attributes
+- **CSS3** — custom properties, grid, flexbox, media queries, `prefers-color-scheme`
+- **Google Fonts** — Inter and Playfair Display
+- **Inline SVG** — for the logo
+
+No build tools, no frameworks, no JavaScript.
+
+## How to View
+
+Clone the repo and open `index.html` directly in any modern browser:
+
 ```bash
-# öppna index.html i din webbläsare
+git clone https://github.com/0pFlow/devault-dapp-dashboard.git
+cd devault-dapp-dashboard
+```
+
+Then either double-click `index.html` or serve the folder with any static file server, for example:
+
+```bash
+# Python 3
+python -m http.server 8000
+
+# Node.js (with npx)
+npx serve .
+```
+
+Then visit `http://localhost:8000`.
+
+## Project Structure
+
+```
+devault-dapp-dashboard/
+├── index.html        # Markup for the dashboard
+├── styles.css        # All styling (responsive, theming, components)
+├── screenshots/      # Preview images used in the README
+│   └── demo1.png
+└── README.md
+```
+
+## Screenshots
+
+![Dashboard overview](screenshots/demo1.png)
+
+## License
+
+This project is provided as a UI demo for learning and portfolio purposes.
