@@ -1,5 +1,14 @@
 # DeVault — dApp Dashboard (UI Demo)
 
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white)
+![Ethereum](https://img.shields.io/badge/-Ethereum-3C3C3D?logo=ethereum&logoColor=white)
+![Web3](https://img.shields.io/badge/-Web3-F16822?logo=web3dotjs&logoColor=white)
+[![Stars](https://img.shields.io/github/stars/0pFlow/devault-dapp-dashboard?style=flat)](https://github.com/0pFlow/devault-dapp-dashboard/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/0pFlow/devault-dapp-dashboard)](https://github.com/0pFlow/devault-dapp-dashboard/commits/main)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
 A responsive **HTML & CSS-only** demo of a dashboard UI for a decentralized application (dApp). There is no JavaScript and no real blockchain integration — this project focuses purely on layout, styling, accessibility, and visual presentation using dummy data.
 
 ![DeVault dashboard demo](screenshots/demo1.png)
